@@ -4,4 +4,5 @@ dart_code_metrics:
   extends:
     - recommended
   metrics:
-    weighted-methods-per-class: 5
+    # weighted-methods-per-class: 15
+    coupling-between-object-classes: 2
