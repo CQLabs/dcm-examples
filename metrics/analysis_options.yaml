@@ -1,0 +1,7 @@
+include: package:lints/recommended.yaml
+
+dart_code_metrics:
+  extends:
+    - recommended
+  metrics:
+    weighted-methods-per-class: 5
