@@ -1,0 +1,4 @@
+include: package:lints/recommended.yaml
+
+dart_code_metrics:
+  exclude-public-api: true

@@ -1,0 +1,48 @@
+{
+	"project_info": {
+		"project_number": "815550173536",
+		"firebase_url": "https://personal-projects-185413.firebaseio.com",
+		"project_id": "personal-projects-185413",
+		"storage_bucket": "personal-projects-185413.appspot.com"
+	},
+	"client": [
+		{
+			"client_info": {
+				"mobilesdk_app_id": "1:815550173536:android:fecee36d7ecdcf9796ce05",
+				"android_client_info": {
+					"package_name": "dev.dcm.app"
+				}
+			},
+			"oauth_client": [
+				{
+					"client_id": "815550173536-739qsr2iveucb996hpe48jnu7mhgo9md.apps.googleusercontent.com",
+					"client_type": 3
+				}
+			],
+			"api_key": [
+				{
+					"current_key": "AIzaSyAOhFMhPbzn0SaWy_QXL7jb7cN9FkaYfaA"
+				}
+			],
+			"services": {
+				"appinvite_service": {
+					"other_platform_oauth_client": [
+						{
+							"client_id": "815550173536-739qsr2iveucb996hpe48jnu7mhgo9md.apps.googleusercontent.com",
+							"client_type": 3
+						},
+						{
+							"client_id": "815550173536-soft2acarie0v5qsh31jba0q9up7q8vn.apps.googleusercontent.com",
+							"client_type": 2,
+							"ios_info": {
+								"bundle_id": "dev.dcm.app",
+								"app_store_id": "1497038143"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"configuration_version": "1"
+}

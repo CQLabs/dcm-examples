@@ -1,0 +1,89 @@
+name: app
+description: DCM Example App
+version: 1.2.0+24
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.20.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.9.0
+  permission_handler: ^11.3.1
+  firebase_analytics: ^10.10.7
+  firebase_core: ^2.32.0
+  firebase_messaging: ^14.7.3
+  shared_preferences: ^2.3.2
+  json_annotation: ^4.9.0
+  http: ^1.2.2
+  firebase_crashlytics: ^3.4.3
+  image_picker: ^1.1.2
+  webview_flutter_android: ^3.16.7
+  awesome:
+    path: ./packages/awesome/
+  structure:
+    path: ./packages/structure
+  typed_data: ^1.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.1
+  flutter_lints: ^4.0.0
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.13
+
+flutter:
+  uses-material-design: true
+
+  generate: true
+
+  assets:
+    - assets/images/_common/
+    - assets/images/_common/icons/
+    - assets/images/_common/texture/
+    - assets/images/collectibles/
+    - assets/images/widget/
+    - assets/logos
+
+  fonts:
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/CinzelDecorative-Regular.ttf
+        - asset: assets/fonts/CinzelDecorative-Black.ttf
+        - asset: assets/fonts/CinzelDecorative-Bold.ttf
+    - family: Yeseva
+      fonts:
+        - asset: assets/fonts/YesevaOne-Regular.ttf
+    - family: Tenor
+      fonts:
+        - asset: assets/fonts/TenorSans-Regular.ttf
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Raleway-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Raleway-ExtraBold.ttf
+          weight: 800
+    - family: MaShanZheng
+      fonts:
+        - asset: assets/fonts/MaShanZheng-Regular.ttf
+    - family: B612Mono
+      fonts:
+        - asset: assets/fonts/B612Mono-Regular.ttf
+
+# Run -> flutter pub run flutter_launcher_icons:main to generate icons
+flutter_launcher_icons:
+  image_path: 'assets/images/icon.png'
+  adaptive_icon_foreground: 'assets/images/icon.png'
+  adaptive_icon_background: 'assets/images/bg.png'
+  min_sdk_android: 21
+  android: true
+  ios: true
+  remove_alpha_ios: true
