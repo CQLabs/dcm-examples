@@ -14,7 +14,7 @@ import 'package:structure/structure.dart'
     if (kIsWeb) '../packages/structure/lib/structure.dart';
 
 Future<void> main() async {
-  print(Structure());
+  debugPrint(Structure().toString());
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
 
@@ -33,13 +33,6 @@ Future<void> main() async {
       firebaseCrashlytics: FirebaseCrashlytics.instance,
       testConfig: 'test',
     );
-    final secondService = AuthService(
-      sharedPreferences: sharedPreferences,
-      firebaseAnalytics: FirebaseAnalytics.instance,
-      firebaseMessaging: FirebaseMessaging.instance,
-      firebaseCrashlytics: FirebaseCrashlytics.instance,
-    );
-    debugPrint(secondService.apiServerKey);
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     runApp(
       App(
