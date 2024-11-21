@@ -31,7 +31,15 @@ Future<void> main() async {
       firebaseAnalytics: FirebaseAnalytics.instance,
       firebaseMessaging: FirebaseMessaging.instance,
       firebaseCrashlytics: FirebaseCrashlytics.instance,
+      testConfig: 'test',
     );
+    final secondService = AuthService(
+      sharedPreferences: sharedPreferences,
+      firebaseAnalytics: FirebaseAnalytics.instance,
+      firebaseMessaging: FirebaseMessaging.instance,
+      firebaseCrashlytics: FirebaseCrashlytics.instance,
+    );
+    debugPrint(secondService.apiServerKey);
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     runApp(
       App(

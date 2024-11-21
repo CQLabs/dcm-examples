@@ -11,16 +11,20 @@ class AuthService {
     required this.sharedPreferences,
     required this.firebaseMessaging,
     required this.firebaseAnalytics,
-    required this.firebaseCrashlytics,
+    this.firebaseCrashlytics,
     this.usernameKey2,
+    this.testConfig = '',
   });
 
   final SharedPreferences sharedPreferences;
 
   final FirebaseMessaging firebaseMessaging;
   final FirebaseAnalytics firebaseAnalytics;
-  final FirebaseCrashlytics firebaseCrashlytics;
+  final FirebaseCrashlytics? firebaseCrashlytics;
   final String? usernameKey2;
+
+  @visibleForTesting
+  final String testConfig;
 
   final String usernameKey = 'username';
   final String passwordKey = 'password';
@@ -38,6 +42,14 @@ class AuthService {
       sharedPreferences.getString(usernameKey),
       sharedPreferences.getString(passwordKey)
     );
+  }
+
+  void greetUser(String name, String greeting) {
+    debugPrint('$greeting, $name!');
+  }
+
+  void processList(List<int> numbers, int length) {
+    debugPrint('Processing list of $length elements.');
   }
 
   Future<bool> saveToStorage(usr, pass) async {
@@ -64,7 +76,7 @@ class AuthService {
       }
       return null;
     } catch (e, s) {
-      firebaseCrashlytics.recordError(e, s);
+      firebaseCrashlytics?.recordError(e, s);
       return null;
     }
   }
@@ -127,7 +139,7 @@ class AuthService {
     final validData = username != null && password != null;
 
     if (validData) {
-      firebaseCrashlytics.setUserIdentifier(username);
+      firebaseCrashlytics?.setUserIdentifier(username);
       final http.Response response = await login(username, password);
       return response;
     }

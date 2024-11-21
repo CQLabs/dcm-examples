@@ -6,11 +6,13 @@ class DropdownNotification extends StatelessWidget {
     required this.onTap,
     required this.title,
     required this.body,
+    this.subTitle = '',
   });
 
   final void Function()? onTap;
   final String title;
   final String body;
+  final String subTitle;
 
   @override
   Widget build(BuildContext context) {

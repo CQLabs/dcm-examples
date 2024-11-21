@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'models.g.dart';
@@ -6,13 +7,13 @@ part 'models.g.dart';
 class AuthResponse {
   const AuthResponse({
     required this.apiStatus,
-    this.userId,
-    this.errors,
+    required this.userId,
+    required this.errors,
   });
 
   final int apiStatus;
-  final String? userId;
-  final AuthResponseError? errors;
+  final String userId;
+  final AuthResponseError errors;
 
   factory AuthResponse.fromJson(Map<String, dynamic> json) {
     return AuthResponse(
@@ -26,15 +27,23 @@ class AuthResponse {
       ),
     );
   }
+
+  void parseObject(Object input) {
+    debugPrint('Object: $input');
+  }
+
+  void greetUser(String name, {String greeting = 'Hi'}) {
+    debugPrint('$greeting, $name!');
+  }
 }
 
 @JsonSerializable()
 class AuthResponseError {
   const AuthResponseError({
-    this.errorText,
+    required this.errorText,
   });
 
-  final String? errorText;
+  final String errorText;
 
   factory AuthResponseError.fromJson(Map<String, dynamic> json) {
     return AuthResponseError(errorText: json['error_text']);

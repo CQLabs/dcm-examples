@@ -8,10 +8,9 @@ part of 'models.dart';
 
 AuthResponse _$AuthResponseFromJson(Map<String, dynamic> json) => AuthResponse(
       apiStatus: (json['apiStatus'] as num).toInt(),
-      userId: json['userId'] as String?,
-      errors: json['errors'] == null
-          ? null
-          : AuthResponseError.fromJson(json['errors'] as Map<String, dynamic>),
+      userId: json['userId'] as String,
+      errors:
+          AuthResponseError.fromJson(json['errors'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$AuthResponseToJson(AuthResponse instance) =>
@@ -23,7 +22,7 @@ Map<String, dynamic> _$AuthResponseToJson(AuthResponse instance) =>
 
 AuthResponseError _$AuthResponseErrorFromJson(Map<String, dynamic> json) =>
     AuthResponseError(
-      errorText: json['errorText'] as String?,
+      errorText: json['errorText'] as String,
     );
 
 Map<String, dynamic> _$AuthResponseErrorToJson(AuthResponseError instance) =>
