@@ -59,7 +59,7 @@ class ForgotFormState extends State<ForgotForm> {
             height: 50,
             child: ElevatedButton(
               style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(
+                backgroundColor: WidgetStatePropertyAll(
                   nOrangeE7792c,
                 ),
               ),

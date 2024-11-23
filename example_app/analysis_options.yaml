@@ -3,6 +3,12 @@ include: package:flutter_lints/flutter.yaml
 dart_code_metrics:
   extends:
     - recommended
+  metrics:
+    - cyclomatic-complexity: 20
+    - halstead-volume: 300
+    - maintainability-index: 50
+    - maximum-nesting-level: 5
+    - number-of-parameters: 6
   exclude:
     parameters:
       - lib/generated/**

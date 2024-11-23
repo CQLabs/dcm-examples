@@ -1,5 +1,5 @@
 import 'package:app/pages/auth.dart';
-import 'package:app/pages/dashboard/dashboard.dart';
+import 'package:app/pages/dashboard.dart';
 import 'package:app/pages/fullscreen_loading.dart';
 import 'package:app/utils/colors.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
