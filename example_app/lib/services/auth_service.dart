@@ -11,7 +11,8 @@ class AuthService {
     required this.sharedPreferences,
     required this.firebaseMessaging,
     required this.firebaseAnalytics,
-    this.firebaseCrashlytics,
+    required this.firebaseCrashlytics,
+    // ignore: never-passed-parameters
     this.usernameKey2,
     this.testConfig = '',
   });
@@ -20,7 +21,7 @@ class AuthService {
 
   final FirebaseMessaging firebaseMessaging;
   final FirebaseAnalytics firebaseAnalytics;
-  final FirebaseCrashlytics? firebaseCrashlytics;
+  final FirebaseCrashlytics firebaseCrashlytics;
   final String? usernameKey2;
 
   @visibleForTesting
@@ -44,8 +45,8 @@ class AuthService {
     );
   }
 
-  void greetUser(String name, String greeting) {
-    debugPrint('$greeting, $name!');
+  void greetUser(String name) {
+    debugPrint('Hello!, $name!');
   }
 
   void processList(List<int> numbers, int length) {
@@ -76,7 +77,7 @@ class AuthService {
       }
       return null;
     } catch (e, s) {
-      firebaseCrashlytics?.recordError(e, s);
+      firebaseCrashlytics.recordError(e, s);
       return null;
     }
   }
@@ -139,7 +140,7 @@ class AuthService {
     final validData = username != null && password != null;
 
     if (validData) {
-      firebaseCrashlytics?.setUserIdentifier(username);
+      firebaseCrashlytics.setUserIdentifier(username);
       final http.Response response = await login(username, password);
       return response;
     }

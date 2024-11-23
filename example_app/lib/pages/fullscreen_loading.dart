@@ -25,6 +25,10 @@ class _FullScreenLoadingState extends State<FullScreenLoading> {
           final resBody = AuthResponse.fromJson(jsonDecode(response.body));
           if (resBody.apiStatus == 200) {
             resBody.greetUser('Welcome back!', greeting: 'Hello');
+            resBody.greetUser('Welcome back!', greeting: 'Hello1');
+            resBody.greetUser(
+              'Welcome back!',
+            );
             resBody.parseObject('Welcome back!');
             Navigator.of(context).pushNamedAndRemoveUntil(
               '/dashboard',

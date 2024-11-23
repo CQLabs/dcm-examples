@@ -80,7 +80,7 @@ class ForgotFormState extends State<ForgotForm> {
                       content: Text('Processing ...'),
                     ),
                   );
-                  widget.dcmService.greetUser(emailCtl.text.trim(), 'Hello!');
+                  widget.dcmService.greetUser(emailCtl.text.trim());
                   widget.dcmService.processList([emailCtl.text.hashCode], 1);
                   widget.dcmService
                       .sendResetPasswordEmail(

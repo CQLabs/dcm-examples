@@ -132,7 +132,7 @@ class LoginFormState extends State<LoginForm> {
                           if (response.statusCode == 200 &&
                               resBody.apiStatus == 200) {
                             ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                            widget.dcmService.greetUser(username, 'Hello!');
+                            widget.dcmService.greetUser(username);
                             widget.dcmService
                                 .saveToStorage(username, password)
                                 .then((saved) {

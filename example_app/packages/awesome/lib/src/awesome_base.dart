@@ -7,7 +7,7 @@ class Awesome {
     print('Doing awesome things!');
   }
 
-  dogBark() {
+  dogBark({bool isDog = true}) {
     return Dog('Lucy').speak();
   }
 }

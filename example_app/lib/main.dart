@@ -13,7 +13,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:structure/structure.dart'
     if (kIsWeb) '../packages/structure/lib/structure.dart';
 
+import 'package:awesome/awesome.dart';
+
 Future<void> main() async {
+  debugPrint(Awesome().dogBark());
   debugPrint(Structure().toString());
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
