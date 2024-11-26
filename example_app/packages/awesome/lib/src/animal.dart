@@ -6,6 +6,10 @@ class Animal {
   void speak() {
     print('Animal speaks');
   }
+
+  void run() {
+    print('Animal runs');
+  }
 }
 
 class Dog extends Animal {
@@ -14,5 +18,10 @@ class Dog extends Animal {
   @override
   void speak() {
     print('Dog barks');
+  }
+
+  @override
+  void run() {
+    print('Dog runs');
   }
 }
