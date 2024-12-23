@@ -13,35 +13,37 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:structure/structure.dart'
     if (kIsWeb) 'package:awesome/awesome.dart';
 
-Future<void> main() async {
+void main() {
   debugPrint(Structure().toString());
-  runZonedGuarded(() async {
-    WidgetsFlutterBinding.ensureInitialized();
+  runZonedGuarded(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
 
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
 
-    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+      FlutterError.onError =
+          FirebaseCrashlytics.instance.recordFlutterFatalError;
 
-    final sharedPreferences = await SharedPreferences.getInstance();
+      final sharedPreferences = await SharedPreferences.getInstance();
 
-    final nService = AuthService(
-      sharedPreferences: sharedPreferences,
-      firebaseAnalytics: FirebaseAnalytics.instance,
-      firebaseMessaging: FirebaseMessaging.instance,
-      firebaseCrashlytics: FirebaseCrashlytics.instance,
-      testConfig: 'test',
-    );
-    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    runApp(
-      App(
-        dcmService: nService,
-      ),
-    );
-  }, (error, stack) {
-    debugPrint('runZonedGuarded: Caught error in my root zone.');
-    debugPrintStack(stackTrace: stack);
-    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
-  });
+      final nService = AuthService(
+        sharedPreferences: sharedPreferences,
+        firebaseAnalytics: FirebaseAnalytics.instance,
+        firebaseMessaging: FirebaseMessaging.instance,
+        firebaseCrashlytics: FirebaseCrashlytics.instance,
+        testConfig: 'test',
+      );
+      await SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp],
+      );
+      runApp(App(dcmService: nService));
+    },
+    (error, stack) {
+      debugPrint('runZonedGuarded: Caught error in my root zone.');
+      debugPrintStack(stackTrace: stack);
+      FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    },
+  );
 }
