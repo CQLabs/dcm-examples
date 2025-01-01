@@ -51,16 +51,9 @@ class _DcmDevAppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: AppLocalizations.of(context)!.appTitle,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en'), // English
-        Locale('es'), // Spanish
-      ],
+      title: AppLocalizations.of(context).appTitle,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(primaryColor: nOrangeE7792c),
       navigatorObservers: [
         FirebaseAnalyticsObserver(
