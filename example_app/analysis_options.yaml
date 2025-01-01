@@ -3,6 +3,8 @@ include: package:flutter_lints/flutter.yaml
 dart_code_metrics:
   extends:
     - recommended
+  rules:
+    - prefer-match-file-name: false
   exclude:
     parameters:
       - lib/generated/**
