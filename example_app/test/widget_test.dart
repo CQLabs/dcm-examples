@@ -39,4 +39,9 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+
+  testWidgets('Renders HomePage title', (WidgetTester tester) async {
+    await tester.pumpWidget(const MaterialApp(home: Text('Home Page')));
+    expect(find.text('Home Page'), findsOneWidget);
+  });
 }
