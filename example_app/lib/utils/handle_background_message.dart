@@ -15,9 +15,3 @@ Future<dynamic> myBackgroundMessageHandler(Map<String, dynamic> message) async {
 
   // Or do other work.
 }
-
-int multiply(int a, int b) {
-  return a * b; // Single return statement
-}
-
-double divide(int x, int y) => x / y; // Expression body
