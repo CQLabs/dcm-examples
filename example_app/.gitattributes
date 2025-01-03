@@ -1,7 +1,0 @@
-* text=auto
-*.sh eol=lf
-*.bat eol=crlf
-
-# * text=auto: Normalizes line endings to LF in the repository.
-# *.bat eol=crlf: Forces CRLF for specific files.
-# *.sh eol=lf: Forces LF for specific files.

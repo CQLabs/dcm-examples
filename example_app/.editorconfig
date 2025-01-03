@@ -1,6 +1,0 @@
-[*]
-end_of_line = lf  # or crlf, depending on your need
-
-# LF (Line Feed): Used by Unix and Linux systems (\n).
-# CRLF (Carriage Return + Line Feed): Used by Windows systems (\r\n).
-# CR (Carriage Return): Used by older Mac systems (\r).
