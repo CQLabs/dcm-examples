@@ -1,0 +1,241 @@
+{
+  "date": "2025-03-06 14:30:01.267132Z",
+  "version": "1.27.1",
+  "paths": {
+    "lib/utils/handle_background_message.dart": {
+      "avoid-dynamic": [
+        "b72f3bd391ba731a35708bfd8cd8a68f",
+        "b72f3bd391ba731a35708bfd8cd8a68f",
+        "b72f3bd391ba731a35708bfd8cd8a68f"
+      ],
+      "avoid-redundant-async": [
+        "0df93e34273b367bb63bad28c94c78d5"
+      ],
+      "avoid-unnecessary-futures": [
+        "b912e726394be2df52410954c363caa3"
+      ]
+    },
+    "lib/utils/colors.dart": {
+      "prefer-prefixed-global-constants": [
+        "5b09d34c34d9e331ec72f0e384563b28",
+        "ba18372b0178a73ebca90c48ec628cba",
+        "38fe27b88123c129947aee36d083615b"
+      ]
+    },
+    "lib/models/models.dart": {
+      "avoid-excessive-expressions": [
+        "dbf4749eebb0a4cac0034a7a5da433d3"
+      ],
+      "prefer-parentheses-with-if-null": [
+        "7410f8615e5eecaabb7d42ec31e0f4be"
+      ],
+      "unnecessary-trailing-comma": [
+        "79be499b47b085df429b3ab17e1cb3cf"
+      ]
+    },
+    "lib/main.dart": {
+      "arguments-ordering": [
+        "71f5ddd41b9aad651e0775aabe78c7a5"
+      ]
+    },
+    "lib/pages/auth.dart": {
+      "unnecessary-trailing-comma": [
+        "4cf3303ff64ade541dab01e2817abe47"
+      ],
+      "arguments-ordering": [
+        "c4ea0d4b64edd5e9a38e8ef953c9ab53",
+        "c378fb0ffbdcc2605b9ca8c8002ab9c0"
+      ],
+      "avoid-inferrable-type-arguments": [
+        "00a3270f172fa9c8cd2ddb17db4fd26b"
+      ],
+      "avoid-missing-image-alt": [
+        "d1ddaf1213d3425a0fcc0e4f0243110c"
+      ]
+    },
+    "lib/pages/fullscreen_loading.dart": {
+      "unnecessary-trailing-comma": [
+        "4cf3303ff64ade541dab01e2817abe47",
+        "9689159d7b188fa9ddd9bdc44524ec7d",
+        "04c08913eba7924aefafc6150c90d443"
+      ],
+      "proper-super-calls": [
+        "cc2563519e56b89837b76f1e49606f16"
+      ],
+      "arguments-ordering": [
+        "b9b694080a4f7e4ece6a4f1eba52e27c",
+        "c378fb0ffbdcc2605b9ca8c8002ab9c0"
+      ],
+      "avoid-inferrable-type-arguments": [
+        "00a3270f172fa9c8cd2ddb17db4fd26b"
+      ],
+      "avoid-missing-image-alt": [
+        "d1ddaf1213d3425a0fcc0e4f0243110c"
+      ]
+    },
+    "lib/pages/dashboard.dart": {
+      "avoid-nullable-interpolation": [
+        "02f642527efd0c6e7f22dbf32e64ccf4",
+        "e0d5edb560a26d4e1becd832ea026e32",
+        "b148e7f41fdc3be4b14e8d17e068bbad"
+      ],
+      "prefer-trailing-comma": [
+        "3dfa5d7e4ab26d3c14a77cf2ab5add0b",
+        "c41494356e49d5f17b15e6170dfabcfa",
+        "36f220098ae751819f00f5526ed1de87"
+      ],
+      "proper-super-calls": [
+        "cc2563519e56b89837b76f1e49606f16"
+      ],
+      "arguments-ordering": [
+        "eb870761cd346168ab4bb2d062b76280",
+        "e2178ebc990f9df299bb67976ee1a3fc",
+        "784da27ba5416daefaad25c592fe0048",
+        "e064b87c2966703e798c0d60efbf3765"
+      ],
+      "no-empty-block": [
+        "f57c79e6aafe6f7df87533407220e13d"
+      ],
+      "unnecessary-trailing-comma": [
+        "dfce4b01f1b72990e2dcec2514faab98",
+        "8e18f2e3d446f7a8dc20a65dd1323c40",
+        "031484e260aca6dd9a3e764d2c73bf92"
+      ],
+      "avoid-inferrable-type-arguments": [
+        "00a3270f172fa9c8cd2ddb17db4fd26b"
+      ],
+      "avoid-unnecessary-overrides-in-state": [
+        "d626d871323833b76c0bb44ad0e0d155"
+      ]
+    },
+    "lib/app.dart": {
+      "avoid-nullable-interpolation": [
+        "015227d882ef4b92b109b7d6926f3f45"
+      ]
+    },
+    "lib/services/auth_service.dart": {
+      "avoid-redundant-positional-field-name": [
+        "14c4b06b824ec593239362517f538b29",
+        "5f4dcc3b5aa765d61d8327deb882cf99"
+      ],
+      "prefer-trailing-comma": [
+        "a33ee6b82677ae6251705dff4cea7d05"
+      ],
+      "avoid-dynamic": [
+        "0a744893951e0d1706ff74a7afccf561",
+        "1a1dc91c907325c69271ddf0c944bc72",
+        "0c83f57c786a0b4a39efab23731c7ebc"
+      ],
+      "avoid-nullable-interpolation": [
+        "d191a5847695148b0dce381e7dec5372",
+        "2d76471e6f56a63e6f0105dd92db4254",
+        "243e61e9410a9f577d2d662c67025ee9"
+      ],
+      "unnecessary-trailing-comma": [
+        "f54f965a70c1b92340c8cb7446004e85"
+      ],
+      "avoid-unused-parameters": [
+        "760eea9c9bce01f117f043328993e436"
+      ]
+    },
+    "lib/widgets/src/forgot_form.dart": {
+      "proper-super-calls": [
+        "cc2563519e56b89837b76f1e49606f16"
+      ],
+      "avoid-inferrable-type-arguments": [
+        "00a3270f172fa9c8cd2ddb17db4fd26b",
+        "00a3270f172fa9c8cd2ddb17db4fd26b"
+      ],
+      "arguments-ordering": [
+        "c3509a9b53be31a0eb44a7c781f3ab3a",
+        "4c888a7138054b9cb5639eb522149cc0",
+        "0dcae67866b0f522b1c1e1dd3cba0acd",
+        "3e6b3a9470a2d3c13469dc61e9a23a7a",
+        "0343d5669ad9fd225fd63b313b2dd140",
+        "6d5e031aa0026682b2abec556a6a6673",
+        "a3fa1cb29571bd345f36133e54c4e7cf"
+      ],
+      "unnecessary-trailing-comma": [
+        "f76f3f3d998e902f220406105996ee4e",
+        "809ba2d1b92b6435d43dc76b7800cab6",
+        "d2243fdc41c003bd1a4717b402c0123a",
+        "a26dec167773e153300c6fd539fc12fd"
+      ],
+      "dispose-fields": [
+        "38893f80ef506a8b825a600077395987",
+        "3a80e55c2852b3964eaf81c8e66cfcdb"
+      ]
+    },
+    "lib/widgets/src/login_form.dart": {
+      "avoid-inferrable-type-arguments": [
+        "00a3270f172fa9c8cd2ddb17db4fd26b",
+        "00a3270f172fa9c8cd2ddb17db4fd26b"
+      ],
+      "arguments-ordering": [
+        "06d5cbbc15575aeaad2005bfc0330964",
+        "e1fca31744f6c284453c3b2ddafd6f44",
+        "0387f7db21200c895bd5a5bae5eae964",
+        "8e05ffa737d9a9463ca0277d10e2a432",
+        "e7a2d3afdc1694f00cca3816627ba6cc",
+        "b92764b0fc067c2fe6b87d030096993b",
+        "9a67df3861b01d52540ac54fcb3733e5",
+        "e978ecbc411a51cd759364956f9befd8"
+      ],
+      "prefer-trailing-comma": [
+        "b6ca5a61485f3b37a752a829aeba7766"
+      ],
+      "unnecessary-trailing-comma": [
+        "a26dec167773e153300c6fd539fc12fd",
+        "f76f3f3d998e902f220406105996ee4e",
+        "4bb471562ffa91da20c3c288f15fd1bc"
+      ],
+      "avoid-passing-async-when-sync-expected": [
+        "180013c6337cfe3c267d90a36489c2ac"
+      ],
+      "use-setstate-synchronously": [
+        "075363380323b4799196ff5108cc951d"
+      ],
+      "avoid-redundant-async": [
+        "0df93e34273b367bb63bad28c94c78d5"
+      ],
+      "avoid-unnecessary-futures": [
+        "0df93e34273b367bb63bad28c94c78d5"
+      ]
+    },
+    "lib/widgets/src/drop_down.dart": {
+      "arguments-ordering": [
+        "24af291bc9413ed2672e214051b66b70",
+        "bf22fcdaa252be9400dc206984b062f8",
+        "ec47dc4b2f013222d03f497e2ef21686",
+        "c1d3035e290a905a591616cc4a437e46"
+      ],
+      "avoid-inferrable-type-arguments": [
+        "24e1573bb1fb9652d410d6d9d1fd399b",
+        "00a3270f172fa9c8cd2ddb17db4fd26b",
+        "00a3270f172fa9c8cd2ddb17db4fd26b",
+        "00a3270f172fa9c8cd2ddb17db4fd26b"
+      ],
+      "prefer-trailing-comma": [
+        "306387b8f903a3a936d34496bf7d5000"
+      ],
+      "unnecessary-trailing-comma": [
+        "04c08913eba7924aefafc6150c90d443"
+      ]
+    },
+    "lib/widgets/src/text_form_field.dart": {
+      "arguments-ordering": [
+        "26b305171e1ac0fe64dc759b547e786d",
+        "e7027e6c5fac397877a0e1ea0a7aba8e",
+        "affe7a4ca30de0a944ce063b0e4cda12",
+        "63b3d8a776b2b6c4f9eb2b1da2841f8f",
+        "1a02bece6ff081090a9dc7fa492df052",
+        "1a02bece6ff081090a9dc7fa492df052"
+      ],
+      "unnecessary-trailing-comma": [
+        "bb5bface6c4b01ce3b4470b7da74909a",
+        "bb5bface6c4b01ce3b4470b7da74909a",
+        "bb5bface6c4b01ce3b4470b7da74909a"
+      ]
+    }
+  }
+}

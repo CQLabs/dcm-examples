@@ -2,10 +2,13 @@ import 'package:app/pages/auth.dart';
 import 'package:app/pages/dashboard.dart';
 import 'package:app/pages/fullscreen_loading.dart';
 import 'package:app/utils/colors.dart';
+import 'package:awesome/awesome.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:app/services/auth_service.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class App extends StatefulWidget {
   const App({super.key, required this.dcmService});
@@ -20,6 +23,7 @@ class _DcmDevAppState extends State<App> {
   @override
   void initState() {
     super.initState();
+    Awesome().doAwesomeThings();
 
     final stream = FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       debugPrint('Got a message whilst in the foreground!');
@@ -49,13 +53,6 @@ class _DcmDevAppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DCM',
-      theme: ThemeData(primaryColor: nOrangeE7792c),
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(
-          analytics: widget.dcmService.firebaseAnalytics,
-        ),
-      ],
       routes: {
         "/": (_) => FullScreenLoading(dcmService: widget.dcmService),
         "/dashboard": (_) => DashboardPage(
@@ -66,6 +63,19 @@ class _DcmDevAppState extends State<App> {
             ),
         "/auth": (_) => AuthPage(dcmService: widget.dcmService),
       },
+      navigatorObservers: [
+        FirebaseAnalyticsObserver(
+          analytics: widget.dcmService.firebaseAnalytics,
+        ),
+      ],
+      title: AppLocalizations.of(context)!.helloWorld,
+      theme: ThemeData(primaryColor: nOrangeE7792c),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }

@@ -12,9 +12,6 @@ class AuthService {
     required this.firebaseMessaging,
     required this.firebaseAnalytics,
     required this.firebaseCrashlytics,
-    // ignore: never-passed-parameters
-    this.usernameKey2,
-    this.testConfig = '',
   });
 
   final SharedPreferences sharedPreferences;
@@ -22,11 +19,6 @@ class AuthService {
   final FirebaseMessaging firebaseMessaging;
   final FirebaseAnalytics firebaseAnalytics;
   final FirebaseCrashlytics firebaseCrashlytics;
-  final String? usernameKey2;
-
-  @visibleForTesting
-  final String testConfig;
-
   final String usernameKey = 'username';
   final String passwordKey = 'password';
   final String userAuthTokenKey = 'userauthtokenkey';
@@ -61,10 +53,6 @@ class AuthService {
     } catch (e) {
       return false;
     }
-  }
-
-  String? getUserAuthToken() {
-    return sharedPreferences.getString(userAuthTokenKey);
   }
 
   Future<String?> getUserDeviceToken() async {

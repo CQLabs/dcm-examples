@@ -4,40 +4,42 @@ version: 1.2.0+24
 publish_to: none
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.20.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.20.0 <4.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-  webview_flutter: ^4.9.0
-  permission_handler: ^11.3.1
-  firebase_analytics: ^10.10.7
-  firebase_core: ^2.32.0
-  firebase_messaging: ^14.7.3
-  shared_preferences: ^2.3.2
-  json_annotation: ^4.9.0
-  http: ^1.2.2
-  firebase_crashlytics: ^3.4.3
-  image_picker: ^1.1.2
-  webview_flutter_android: ^3.16.7
   awesome:
     path: ./packages/awesome/
+  firebase_analytics: ^10.10.7
+  firebase_core: ^2.32.0
+  firebase_crashlytics: ^3.4.3
+  firebase_messaging: ^14.7.3
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  image_picker: ^1.1.2
+  json_annotation: ^4.9.0
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.3.2
   structure:
     path: ./packages/structure
   typed_data: ^1.3.2
+  webview_flutter: ^4.9.0
+  webview_flutter_android: ^3.16.7
+  flutter_localizations:
+    sdk: flutter
+  flutter_gen: ^5.10.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  build_runner: ^2.4.13
   flutter_launcher_icons: ^0.14.1
   flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
   json_serializable: ^6.8.0
-  build_runner: ^2.4.13
 
 flutter:
   uses-material-design: true
-
   generate: true
 
   assets:
@@ -80,9 +82,9 @@ flutter:
 
 # Run -> flutter pub run flutter_launcher_icons:main to generate icons
 flutter_launcher_icons:
-  image_path: 'assets/images/icon.png'
-  adaptive_icon_foreground: 'assets/images/icon.png'
-  adaptive_icon_background: 'assets/images/bg.png'
+  image_path: "assets/images/icon.png"
+  adaptive_icon_foreground: "assets/images/icon.png"
+  adaptive_icon_background: "assets/images/bg.png"
   min_sdk_android: 21
   android: true
   ios: true

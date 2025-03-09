@@ -5,6 +5,23 @@ dart_code_metrics:
     - recommended
   rules:
     - prefer-match-file-name: false
+    - avoid-undisposed-instances:
+        ignored-instances:
+          - SomeClass
+        ignored-invocations:
+          - WithAutoDispose
+    - arguments-ordering:
+        alphabetize: false
+        first:
+          - some
+          - name
+        last:
+          - child
+          - children
   exclude:
     parameters:
       - lib/generated/**
+  metrics:
+    - halstead-volume: 50
+    - cyclomatic-complexity: 10
+    - lines-of-code: 10

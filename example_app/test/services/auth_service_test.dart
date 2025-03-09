@@ -11,8 +11,8 @@ main() {
     final sharedPreferences = await SharedPreferences.getInstance();
     final nService = AuthService(
       sharedPreferences: sharedPreferences,
-      firebaseAnalytics: FirebaseAnalytics.instance,
       firebaseMessaging: FirebaseMessaging.instance,
+      firebaseAnalytics: FirebaseAnalytics.instance,
       firebaseCrashlytics: FirebaseCrashlytics.instance,
     );
     expect(nService.apiServerKey, '04caaa026874a2679f65e76251e32568');
