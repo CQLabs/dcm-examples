@@ -1,0 +1,26 @@
+---
+description: "Generated file code quality check"
+globs:
+alwaysApply: false
+---
+
+Instructions
+
+- Run Dart/Flutter **analyzer** and **format** and **AutoFix** on the new/modified files.
+- Run **DCM analyze** on the same files → apply **safe** DCM autofixes → **format** → re-analyze.
+- Ensure formatting strictly follows project rules (re-run format if needed).
+- If any analyzer **error** or DCM **error** remains, refine/regenerate and repeat the loop.
+- Separately analyze **generated artifacts** (e.g., `**/*.g.dart`, `**/*.freezed.dart`, `build/**`) using:
+  - `dcm init lints-preview` for modified files / new files to detect **high-priority rules not currently enabled** that would have caught issues especially performance, memory leaks risks but do **not** modify generated artifacts; propose upstream fixes or rule enablement instead.
+- Autofix warnings and style issues that DCM can automatically fix on modified / new files
+
+Stop when
+
+- Errors = 0. Warnings are acceptable if reasonable; prefer small follow-up suggestions over disabling rules.
+
+Output
+
+- **Short summary** of what changed and which rules were fixed.
+- **Remaining warnings** (if any) with one-line suggestions.
+- **Lints-preview recommendations table** for generated artifacts:
+  | rule_id | category | why it matters (perf/correctness/etc.) | suggested action (enable / tune) |
