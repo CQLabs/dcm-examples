@@ -4,6 +4,19 @@ dart_code_metrics:
   extends:
     - recommended
   rules:
+    - avoid-slow-collection-methods
+    - avoid-single-child-column-or-row
+    - prefer-bytes-builder
+    - prefer-declaring-const-constructor
+    - avoid-map-keys-contains
+    - avoid-border-all
+    - avoid-incorrect-image-opacity
+    - avoid-returning-widgets
+    - avoid-unnecessary-setstate
+    - pass-existing-future-to-future-builder
+    - pass-existing-stream-to-stream-builder
+    - prefer-const-border-radius
+    - prefer-dedicated-media-query-methods
     - prefer-match-file-name: true
     - avoid-undisposed-instances:
         ignored-instances:
