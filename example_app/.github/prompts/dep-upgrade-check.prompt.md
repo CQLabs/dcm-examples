@@ -2,19 +2,47 @@
 mode: agent
 ---
 
-Goal
+Goal & Context
 
-- Perform a **safe** package upgrade, apply analyzer/Dart fixes, then run a DCM pass to catch regressions.
+- Use both always **Dart MCP** and **DCM MCP** to perform a safe package upgrade, apply fixes, and ensure no regressions slip in.
 
 Steps
 
-1. Run `pub outdated` then plan `pub upgrade --major-versions` with a preview (Dart MCP: pub).
-2. Apply upgrades **in a temp patch**; run analyzer on the workspace (Dart MCP: analyze_files).
-3. Propose `dart fix --apply` candidates; show a diff preview; ASK before applying (Dart MCP: dart_fix, dart_format).
-4. Run DCM analyze → **safe autofix** → format → re-analyze (DCM).
-5. Summarize breaking changes discovered by analyzer + any new DCM “error” findings. Propose a PR message + follow-ups.
-   Constraints
+1. **Plan upgrade**:
 
-- No auto-commit. Pause if diff > 400 lines.
-  Output
-- PR summary with upgraded packages, applied fixes, remaining issues (file:line, rule/code), and recommended follow-ups.
+   - Run MCP outdated dart pub command.
+   - Propose a MCP dart pub upgrade --major-versions plan with preview output.
+
+2. **Apply in isolation**:
+
+   - Apply upgrades in a **temporary patch**.
+   - Run analyzer across the workspace (Dart MCP: analyze_files).
+
+3. **Fix candidates**:
+
+   - Propose fix --apply changes.
+   - Show a unified diff preview and **ask before applying**.
+
+4. **Quality sweep**:
+
+   - Run DCM analyze.
+   - Apply **safe autofixes** + format.
+   - Re-analyze to verify.
+
+5. **Summarize**:
+   - Highlight analyzer findings and any new DCM “error” severity issues.
+   - Draft a PR message with upgraded packages, fixed rules, and follow-up recommendations.
+
+Constraints
+
+- Never stage or commit automatically.
+- Pause if the diff exceeds 400 lines.
+
+Output
+
+- **PR summary** including:
+  - List of upgraded packages.
+  - Applied analyzer fixes (Dart MCP).
+  - Applied DCM fixes with rule counts.
+  - Remaining issues table: file, line, source=`dart|dcm`, code/rule, message.
+  - Recommended follow-ups.
