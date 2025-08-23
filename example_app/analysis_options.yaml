@@ -4,14 +4,14 @@ dart_code_metrics:
   extends:
     - recommended
   rules:
-    - prefer-match-file-name: false
+    - prefer-match-file-name: true
     - avoid-undisposed-instances:
         ignored-instances:
           - SomeClass
         ignored-invocations:
           - WithAutoDispose
     - arguments-ordering:
-        alphabetize: false
+        alphabetize: true
         first:
           - some
           - name
@@ -22,6 +22,7 @@ dart_code_metrics:
     parameters:
       - lib/generated/**
   metrics:
-    - halstead-volume: 50
-    - cyclomatic-complexity: 10
-    - lines-of-code: 10
+    halstead-volume: 50
+    cyclomatic-complexity: 10
+    lines-of-code: 10
+    maximum-nesting-level: 5
