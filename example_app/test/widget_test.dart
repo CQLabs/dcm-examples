@@ -24,6 +24,7 @@ void main() {
       firebaseAnalytics: FirebaseAnalytics.instance,
       firebaseMessaging: FirebaseMessaging.instance,
       firebaseCrashlytics: FirebaseCrashlytics.instance,
+      testConfig: '',
     );
     await tester.pumpWidget(App(dcmService: nService));
 

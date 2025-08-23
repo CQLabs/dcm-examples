@@ -14,6 +14,7 @@ main() {
       firebaseMessaging: FirebaseMessaging.instance,
       firebaseAnalytics: FirebaseAnalytics.instance,
       firebaseCrashlytics: FirebaseCrashlytics.instance,
+      testConfig: '',
     );
     expect(nService.apiServerKey, '04caaa026874a2679f65e76251e32568');
   });
