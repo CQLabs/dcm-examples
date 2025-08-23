@@ -8,7 +8,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:app/services/auth_service.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'l10n/app_localizations.dart';
 
 class App extends StatefulWidget {
   const App({super.key, required this.dcmService});

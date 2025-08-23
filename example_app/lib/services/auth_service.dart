@@ -12,6 +12,7 @@ class AuthService {
     required this.firebaseMessaging,
     required this.firebaseAnalytics,
     required this.firebaseCrashlytics,
+    required String testConfig,
   });
 
   final SharedPreferences sharedPreferences;
